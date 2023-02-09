@@ -11,7 +11,7 @@
             alt="Vuetify Logo"
             class="shrink mr-2"
             contain
-            src="./assets/logo.svg"
+            src="./assets/vuetify-log.svg"
             transition="scale-transition"
             width="40"
         />
@@ -21,7 +21,7 @@
             class="shrink mt-1"
             contain
             min-width="100"
-            src="./assets/img.png"
+            src="./assets/vuetify-img.png"
             width="100"
         />
       </div>
@@ -131,7 +131,7 @@ export default {
       this.$router.push({path: "/"});
     },
     navigate2tab2() {
-      this.$router.push({path: "/about"});
+      this.$router.push({path: "/blog"});
     },
     navigate2tab3() {
       this.$router.push({path: "/about"});

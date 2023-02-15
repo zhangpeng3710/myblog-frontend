@@ -11,7 +11,7 @@
         :key="i"
         to=""
     >
-      <v-img :src="item.src" height="500">
+      <v-img :src="item.src" height="400"  >
         <h1 style="margin-bottom: 10px" >
           {{ item.src }}
         </h1>

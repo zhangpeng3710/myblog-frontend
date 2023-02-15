@@ -34,8 +34,9 @@
       >
         <v-tab @click="navigate2tab1">One</v-tab>
         <v-tab @click="navigate2tab2">Two</v-tab>
-        <v-tab @click="navigate2tab3">Three</v-tab>
+        <v-tab to="/details">Three</v-tab>
         <v-tab @click="navigate2tab4">Four</v-tab>
+        <v-tab to="/mdEditor">Four</v-tab>
       </v-tabs>
 
       <v-btn icon>
@@ -134,7 +135,7 @@ export default {
       this.$router.push({path: "/blog"});
     },
     navigate2tab3() {
-      this.$router.push({path: "/about"});
+      this.$router.push({path: "/details"});
     },
     navigate2tab4() {
       this.$router.push({path: "/about"});

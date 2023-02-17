@@ -164,7 +164,7 @@
 <script>
 
 
-import MessageInBlogDetail from "@/components/MessageInBlogDetail";
+import MessageInBlogDetail from "@/views/blog/MessageInBlogDetail";
 export default {
   name: "Details",
   components: {MessageInBlogDetail},

@@ -102,7 +102,8 @@
               class="blue lighten-2 mt-5"
               dark
               large
-              href="/pre-made-themes"
+              :loading="btnLoading"
+              @click="test2"
           >
             Get Started
           </v-btn>
@@ -113,12 +114,14 @@
 </template>
 
 <script>
+import {getTest, getUser} from "@/api/api";
 
 export default {
   name: "Home",
   components: {},
   data() {
     return {
+      btnLoading: false,
       title: "Your Logo",
       heroImg: require("../assets/homePage/hero.jpeg"),
       sectionImg: require("../assets/homePage/section.jpeg")
@@ -130,7 +133,30 @@ export default {
   methods: {
     setLocaleToFr() {
       this.$locale = 'fr';
+    },
+    test() {
+      console.log("getTest");
+      this.btnLoading = true
+
+      getTest({params: {id: 1}},)
+          .then(res => console.log(res))
+          .catch(err => console.log(err))
+          .finally(() => this.btnLoading = false);
+
+    },
+    async test2() {
+      let o = Object.assign({message: 'Info'})
+
+      this.$root.$confirm(o).then(confirm => confirm && getUser())
+
+      // if (await this.$root.$confirm(o)) {
+      //   getUser().finally(() => console.log("finish"))
+      // } else {
+      //   console.log("reject")
+      // }
+
     }
   }
-};
+}
+
 </script>

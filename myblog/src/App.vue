@@ -91,6 +91,7 @@
         </v-card-text>
       </v-card>
     </v-footer>
+    <DialogConfirm ref="dialogConfirm"></DialogConfirm>
   </v-app>
 </template>
 
@@ -98,9 +99,11 @@
 
 import AvatarInAppBar from "@/components/AvatarInAppBar";
 import MessageInAppBar from "@/components/MessageInAppBar";
+import DialogConfirm from "@/components/DialogConfirm";
+
 export default {
   name: 'App',
-  components: {MessageInAppBar, AvatarInAppBar},
+  components: {DialogConfirm, MessageInAppBar, AvatarInAppBar},
   data: () => ({
     user: {
       initials: 'JD',
@@ -140,6 +143,11 @@ export default {
     navigate2tab4() {
       this.$router.push({path: "/about"});
     },
+  },
+
+  mounted() {
+    //mounting double confirm component to Vue instance
+    this.$root.$confirm = this.$refs.dialogConfirm.open;
   }
 };
 </script>

@@ -14,7 +14,7 @@
       <v-img
           :src="item.src"
           height="400"
-          style="margin: 10px"
+          style="margin: 25px"
       >
         <h1 style="margin-bottom: 10px" >
           {{ item.src }}

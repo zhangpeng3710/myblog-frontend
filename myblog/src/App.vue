@@ -138,7 +138,7 @@ export default {
       this.$router.push({path: "/blog"});
     },
     navigate2tab3() {
-      this.$router.push({path: "/details"});
+      this.$router.push({path: "/blog/details"});
     },
     navigate2tab4() {
       this.$router.push({path: "/about"});

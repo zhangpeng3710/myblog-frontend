@@ -1,6 +1,6 @@
 <template>
 
-  <v-list three-line expand="true">
+  <v-list three-line :expand="true">
     <template v-for="(item, index) in items">
 
       <v-list-item

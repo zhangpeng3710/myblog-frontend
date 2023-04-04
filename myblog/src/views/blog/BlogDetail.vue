@@ -170,7 +170,7 @@ export default {
   components: {MessageInBlogDetail},
   data() {
     return {
-
+      rating: 3.5,
       rules: [v => v.length <= 25 || 'Max 25 characters'],
       value: '',
       selectedItem: 0,

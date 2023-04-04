@@ -103,7 +103,7 @@
               dark
               large
               :loading="btnLoading"
-              @click="test2"
+              @click="test"
           >
             Get Started
           </v-btn>
@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import {getTest, getUser} from "@/api/api";
+import {getUser, getUser2} from "@/api/api";
 
 export default {
   name: "Home",
@@ -138,13 +138,13 @@ export default {
       console.log("getTest");
       this.btnLoading = true
 
-      getTest({params: {id: 1}},)
+      getUser({params: {id: 1}},)
           .then(res => console.log(res))
           .catch(err => console.log(err))
           .finally(() => this.btnLoading = false);
 
     },
-    async test2() {
+    test2() {
       let o = Object.assign({message: 'Info'})
 
       this.$root.$confirm(o).then(confirm => confirm && getUser())
@@ -155,6 +155,9 @@ export default {
       //   console.log("reject")
       // }
 
+    },
+    test3() {
+      getUser2()
     }
   }
 }
